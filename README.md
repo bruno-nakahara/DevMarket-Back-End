@@ -43,5 +43,5 @@ $ pip list
 # Se tem todas as dependências, então rode a aplicação com
 $ py server.py
 
-# E pronto! Back-end da Aplicação rodando.
+# e pronto! Back-end da Aplicação rodando.
 # Na pasta images tem algumas imagens para testar a aplicação.
