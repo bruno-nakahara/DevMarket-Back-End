@@ -22,7 +22,7 @@
 <p>Cria uma pasta onde irá baixar os códigos. Após criar a pasta siga os passos abaixo:</p>
 
 ```
-# No terminal da pasta criada copie o repositório com o seguinte comando
+# No terminal da pasta criada, copie o repositório com o seguinte comando
 $ git clone https://github.com/bruno-nakahara/Freshmania-Back-End.git
 
 # Após clonar o repositório, pelo terminal, entra na pasta usando o comando
@@ -34,7 +34,7 @@ $ python -m venv venv
 # Depois de criar o ambiente virtual, ative o virtualenv com o comando
 $ venv\Scripts\Activate.bat
 
-# Após a ativação, baixe as dependências utilizando o comando para o pip ler as dependências necessárias para o projeto
+# Após a ativação, baixe as dependências utilizando o comando 
 $ pip install -r requirements.txt
 
 # Verifica as dependências instaladas do requirements.txt com comando
