@@ -6,7 +6,7 @@ class ProductsRepository(object):
     def __init__(self):
         # Inicializar o MongoDB, configurando a porta, host e database, para ter acesso aos databases e collections
         self.client = MongoClient(host='localhost', port=27017)        
-        self.database = self.client['freshmania']
+        self.database = self.client['devmarket']
 
 
     def create(self, product):

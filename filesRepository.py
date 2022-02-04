@@ -8,8 +8,8 @@ class ImagesRepository(object):
     def __init__(self):
         # Inicializar o MongoDB, configurando a porta, host e database, para ter acesso aos databases e collections
         self.client = MongoClient(host='localhost', port=27017)        
-        self.database = self.client['freshmania']
-        #Conectar gridFs com o banco para salvar a imagem no database freshmania
+        self.database = self.client['devmarket']
+        #Conectar gridFs com o banco para salvar a imagem no database devmarket
         self.fs = gridfs.GridFS(self.database)
 
 

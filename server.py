@@ -8,6 +8,7 @@ from file import Image
 from filesRepository import ImagesRepository
 
 app = Flask(__name__) 
+#Instanciar as classes ProductsRepository e ImagesRepository
 repository_product = ProductsRepository()
 repository_image = ImagesRepository()
 
@@ -20,14 +21,15 @@ CORS(app)
 @app.route("/products", methods=["GET"])
 def get_all_products():
     try:
+        #Consultar todos os produtos 
         data = list(repository_product.read())
-
+        #Passar fileName da imagem de cada produto e transformar em string, os ObjectIds
         for product in data:
             product["_id"] = str(product["_id"])
             product["fileName"] = str(product["fileName"])
             product["image"] = repository_image.read(product["fileName"])  
             
-        
+        #Responder o front-end com dados de todos os produtos
         return Response(
             response=json.dumps(data),
             status=200,
@@ -130,17 +132,21 @@ def update_product(id):
 @app.route("/products/<id>", methods=["DELETE"])
 def delete_product(id):
     try:    
-        data = repository_product.read(id)        
+        #Pegar os dados do produto com id para conseguir o fileName da imagem
+        data = repository_product.read(id)
+        #Deletar a imagem que tem o mesmo fileName        
         repository_image.delete(data["fileName"])
+        #Após deletar a imagem, deletar o produto
         dbResponse = repository_product.delete(id)
 
+        #Se conseguir deletar com sucesso
         if dbResponse.deleted_count == 1:
             return Response(
                 response=json.dumps({ "message": "Produto deletado com sucesso!" }),
                 status=200,
                 mimetype="application/json"
             )
-
+        #Se não encontrar o produto
         return Response(
                 response=json.dumps({ "message": "Produto não encontrado!" }),
                 status=400,
@@ -158,6 +164,6 @@ def delete_product(id):
         )
 
 ##################################################################
-
+#Rodando na porta 80
 if __name__ == "__main__":
     app.run(port=80, debug=True)
