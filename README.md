@@ -1,4 +1,4 @@
-<h1>Freshmania-Back-End</h1>
+<h1>DevMarket-Back-End</h1>
 
 <h2>Como é a aplicação?</h2>
 
