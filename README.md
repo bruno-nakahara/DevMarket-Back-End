@@ -46,3 +46,5 @@ $ py server.py
 # e pronto! Back-end da Aplicação rodando.
 # Na pasta images tem algumas imagens para testar a aplicação.
 ```
+
+<p>Caso necessita mudar a porta que o MongoDB utiliza por default 27017 e o nome da database do MongoDB(devmarket), abra os arquivos "filesRepository.py" e "productsRepository.py", no construtor da classe pode fazer a mudança.</p>
