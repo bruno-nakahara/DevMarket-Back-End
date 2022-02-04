@@ -23,10 +23,10 @@
 
 ```
 # No terminal da pasta criada, copie o repositório com o seguinte comando
-$ git clone https://github.com/bruno-nakahara/Freshmania-Back-End.git
+$ git clone https://github.com/bruno-nakahara/DevMarket-Back-End.git
 
 # Após clonar o repositório, pelo terminal, entra na pasta usando o comando
-$ cd Freshmania-Back-End
+$ cd DevMarket-Back-End
 
 # Criar um ambiente virtual com nome venv para instalar as dependências
 $ python -m venv venv
